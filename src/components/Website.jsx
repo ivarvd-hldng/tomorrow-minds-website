@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ChevronRight, Brain, Users, Rocket, Calendar, Mail, Phone } from 'lucide-react';
+import { ChevronRight, Brain, Users, Rocket, Calendar } from 'lucide-react';
 
 const BlogPreview = ({ title, date, excerpt }) => (
   <div className="bg-white p-6 rounded-lg shadow-sm">
@@ -14,8 +14,7 @@ const ContactForm = () => {
   const [formState, setFormState] = useState({
     name: '',
     email: '',
-    message: '',
-    phone: ''
+    message: ''
   });
 
   return (
@@ -44,15 +43,6 @@ const ContactForm = () => {
           name="email"
           className="w-full p-2 border rounded-lg"
           required
-        />
-      </div>
-
-      <div>
-        <label className="block text-sm font-medium text-gray-700 mb-1">Telefoonnummer</label>
-        <input
-          type="tel"
-          name="phone"
-          className="w-full p-2 border rounded-lg"
         />
       </div>
       
@@ -175,20 +165,15 @@ export default function Website() {
       {/* Launch Section */}
       <div className="bg-gray-100">
         <div className="max-w-6xl mx-auto px-4 py-24">
-          <div className="bg-white rounded-2xl p-12 flex items-center justify-between">
-            <div>
-              <h2 className="text-3xl font-bold mb-4">Start Your AI Journey</h2>
-              <p className="text-gray-600 mb-6">
-                Tomorrow Minds lanceert in januari 2025. Wees er vroeg bij en ontdek hoe AI uw organisatie kan versterken.
-              </p>
-              <button className="bg-indigo-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-indigo-700 flex items-center gap-2">
-                <Calendar size={20} />
-                Plan een gesprek
-              </button>
-            </div>
-            <div className="hidden md:block">
-              <img src="/api/placeholder/400/300" alt="AI Implementation" className="rounded-lg" />
-            </div>
+          <div className="bg-white rounded-2xl p-12">
+            <h2 className="text-3xl font-bold mb-4">Start Your AI Journey</h2>
+            <p className="text-gray-600 mb-6">
+              Tomorrow Minds lanceert in januari 2025. Wees er vroeg bij en ontdek hoe AI uw organisatie kan versterken.
+            </p>
+            <button className="bg-indigo-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-indigo-700 flex items-center gap-2">
+              <Calendar size={20} />
+              Plan een gesprek
+            </button>
           </div>
         </div>
       </div>
@@ -203,16 +188,6 @@ export default function Website() {
                 Wilt u meer weten over hoe Tomorrow Minds uw organisatie kan helpen met AI? 
                 Neem contact op voor een vrijblijvend gesprek.
               </p>
-              <div className="space-y-4">
-                <div className="flex items-center gap-3">
-                  <Mail className="text-indigo-600" />
-                  <span>info@tomorrow-minds.ai</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <Phone className="text-indigo-600" />
-                  <span>06-27367007</span>
-                </div>
-              </div>
             </div>
             <div>
               <ContactForm />
@@ -252,7 +227,6 @@ export default function Website() {
               <h4 className="font-bold text-lg mb-4">Contact</h4>
               <ul className="space-y-2 text-gray-600">
                 <li>Utrecht, Nederland</li>
-                <li>info@tomorrow-minds.ai</li>
               </ul>
             </div>
           </div>
