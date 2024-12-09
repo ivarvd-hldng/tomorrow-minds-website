@@ -13,22 +13,6 @@ const BlogPreview = ({ title, date, excerpt }) => (
 const ContactForm = () => {
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    const formData = new FormData(e.target);
-
-    try {
-      await fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(formData).toString()
-      });
-      setSubmitted(true);
-    } catch (error) {
-      console.error('Error:', error);
-    }
-  };
-
   if (submitted) {
     return (
       <div className="bg-green-50 p-6 rounded-lg text-center">
@@ -43,8 +27,8 @@ const ContactForm = () => {
       name="tomorrow-minds-contact" 
       method="POST" 
       data-netlify="true"
-      data-netlify-honeypot="bot-field"
-      onSubmit={handleSubmit}
+      netlify-honeypot="bot-field"
+      action="/success"
       className="space-y-4"
     >
       <input type="hidden" name="form-name" value="tomorrow-minds-contact" />
@@ -95,8 +79,6 @@ const Website = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Rest van de Website component blijft hetzelfde... */}
-      
       {/* Contact Section */}
       <div id="contact" className="bg-white">
         <div className="max-w-6xl mx-auto px-4 py-24">
@@ -114,8 +96,6 @@ const Website = () => {
           </div>
         </div>
       </div>
-
-      {/* Footer blijft hetzelfde... */}
     </div>
   );
 };
