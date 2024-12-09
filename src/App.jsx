@@ -1,8 +1,11 @@
-import Website from './components/Website'
+import React from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
+import AppRoutes from './routes';
 
-function App() {
-  return <Website />
-}
+const App = () => (
+  <Router>
+    <AppRoutes />
+  </Router>
+);
 
-// Trigger new deploy
-export default App
+export default App;
