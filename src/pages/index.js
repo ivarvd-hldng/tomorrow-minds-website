@@ -1,6 +1,7 @@
-export { default as ServicesPage } from './ServicesPage.jsx';
-export { default as AboutPage } from './AboutPage.jsx';
-export { default as BlogPage } from './BlogPage.jsx';
-export { default as CareersPage } from './CareersPage.jsx';
-export { default as PrivacyPolicy } from './legal/PrivacyPolicy.jsx';
-export { default as TermsAndConditions } from './legal/TermsAndConditions.jsx';
+// src/pages/index.js
+export { default as ServicesPage } from './components/ServicesPage';
+export { default as AboutPage } from './components/AboutPage';
+export { default as BlogPage } from './components/BlogPage';
+export { default as CareersPage } from './components/CareersPage';
+export { default as PrivacyPolicy } from './components/PrivacyPolicy';
+export { default as TermsAndConditions } from './components/TermsAndConditions';
