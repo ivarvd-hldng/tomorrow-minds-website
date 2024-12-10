@@ -73,15 +73,12 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Contact Info */}
+          {/* Contact Section */}
           <div>
             <h3 className="font-semibold text-gray-900 mb-4">Contact</h3>
             <div className="space-y-2">
               <p className="text-sm text-gray-600">
-                info@tomorrow-minds.ai
-              </p>
-              <p className="text-sm text-gray-600">
-                +31 (0)6 273 67 007
+                Neem contact op via het contactformulier.
               </p>
               <div className="mt-4 space-y-2">
                 {footerLinks.juridisch.map((link) => (
